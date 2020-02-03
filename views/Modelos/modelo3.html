@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta title="habilitar, deshabilitar combos según selección en un checkbox">
+</head>
+ 
+<body>
+   <div>
+      <form name="ejemplo2">
+         ¿Desea suscribirse a nuestro boletín de novedades? <input type="checkbox" name="boletin" value="ON" checked onClick="habilitaDeshabilita(this.form)"> SI, quiero suscribirme.
+         <br><br>
+         
+         Seleccione los temas de su interés:<br>
+         
+         <input type="checkbox" name="intereses" value="Arte y Cultura"> Arte y Cultura<br>
+         
+         <input type="checkbox" name="intereses" value="Ciencia">Ciencia<br>
+         
+         <input type="checkbox" name="intereses" value="Música">Música<br>
+         
+         </form>
+   </div>
+   <script languaje="javascript">
+
+      function habilitaDeshabilita(form)
+      
+      {
+      
+          if (form.boletin.checked == true)
+      
+          {
+      
+          form.intereses[0].disabled = true;
+          form.intereses[1].disabled = true;
+          form.intereses[2].disabled = true;
+      
+          }
+      
+       
+      
+          if (form.boletin.checked == false)
+      
+          {
+      
+          form.intereses[0].disabled = false;
+          form.intereses[1].disabled = false;
+          form.intereses[2].disabled = false;
+      
+          }
+      
+       
+      
+      }
+      </script>
+</body>
+</html>

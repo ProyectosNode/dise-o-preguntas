@@ -1,0 +1,120 @@
+doctype html
+html(lang='en')
+  head
+    // Import Google Icon Font
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    // Compiled and minified CSS
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css')
+    // Compiled and minified JavaScript
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js')
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Agregar
+  body
+    form(action='/add', method='post')
+      .container
+        .col(style='text-align:center;')
+          h2 Ingresar Información
+        .col
+          .col
+          .col.z-depth-4.card-panel.border-radius-6(style='text-align:left;')
+            br
+            br
+            label(for='pregunta', style='color: black;') Pregunta:
+            textarea#pregunta.materialize-textarea(placeholder='Escribe aquí una pregunta')
+            br
+            br
+            br
+            br
+            label(for='respuesta1', style='color: black;') Respuesta 1:
+            textarea#respuesta1.materialize-textarea(placeholder='Escribe aquí una respuesta')
+            p
+              label
+                input#R1(type='checkbox')
+                span Correcto
+            br
+            br
+            label(for='respuesta2', style='color: black;') Respuesta 2:
+            textarea#respuesta2.materialize-textarea(placeholder='Escribe aquí una respuesta')
+            p
+              label
+                input#R2(type='checkbox')
+                span Correcto
+            br
+            br
+            label(for='respuesta3', style='color: black;') Respuesta 3:
+            textarea.materialize-textarea(id='respuesta 3', placeholder='Escribe aquí una respuesta')
+            p
+              label
+                input#R3(type='checkbox')
+                span Correcto
+            br
+            br
+            label(for='respuesta4', style='color: black;') Respuesta 4:
+            textarea.materialize-textarea(id='respuesta 4', placeholder='Escribe aquí una respuesta')
+            p
+              label
+                input#R4(type='checkbox')
+                span Correcto
+            br
+            br
+            div(style='text-align:right;')
+              button.btn.waves-effect.waves-light(type='submit')
+                | Guardar
+                | Información
+                i.material-icons.right send
+              br
+              br
+          .col
+    #pie.col(style='text-align:center;')
+      | © 2020 Investigación y Desarrollo
+    script.
+      let chek1 = document.getElementById('R1')
+      let chek2 = document.getElementById('R2')
+      let chek3 = document.getElementById('R3')
+      let chek4 = document.getElementById('R4')
+      chek1.addEventListener('change', function () {
+      if (chek2.checked) {
+      chek2.checked = false
+      }
+      if (chek3.checked) {
+      chek3.checked = false
+      }
+      if (chek4.checked) {
+      chek4.checked = false
+      }
+      })
+      chek2.addEventListener('change', function () {
+      if (chek1.checked) {
+      chek1.checked = false
+      }
+      if (chek3.checked) {
+      chek3.checked = false
+      }
+      if (chek4.checked) {
+      chek4.checked = false
+      }
+      })
+      chek3.addEventListener('change', function () {
+      if (chek1.checked) {
+      chek1.checked = false
+      }
+      if (chek2.checked) {
+      chek2.checked = false
+      }
+      if (chek4.checked) {
+      chek4.checked = false
+      }
+      })
+      chek4.addEventListener('change', function () {
+      if (chek1.checked) {
+      chek1.checked = false
+      }
+      if (chek2.checked) {
+      chek2.checked = false
+      }
+      if (chek3.checked) {
+      chek3.checked = false
+      }
+      })

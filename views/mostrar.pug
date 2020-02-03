@@ -1,0 +1,57 @@
+doctype html
+html(lang='en')
+  head
+    // Import Google Icon Font
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    // Compiled and minified CSS
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css')
+    // Compiled and minified JavaScript
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js')
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Panel
+  body
+    .container
+      .col(style='text-align:center;')
+        h2 Panel de preguntas:
+      .col
+        .col
+        .col.z-depth-4.card-panel.border-radius-6(style='text-align:left;')
+          br
+          br
+          table
+            thead
+              tr
+                th No.
+                th Contenido
+                th Acciones
+            tbody
+              tr
+                td 1
+                td ¿Porqué el cielo es azul?
+                td
+                  i.small.material-icons edit
+                  i.small.material-icons delete
+              tr
+                td 2
+                td ¿Podemos contar las estrellas?
+                td
+                  i.small.material-icons edit
+                  i.small.material-icons delete
+              tr
+                td 3
+                td ¿El peso Mexicano está respaldado en oro?
+                td
+                  i.small.material-icons edit
+                  i.small.material-icons delete
+          br
+          br
+          div(style='text-align:right;')
+            a.btn-floating.btn-large.waves-effect.waves-light.red(type='submit', onclick="window.location.href='/add'")
+              i.material-icons add
+            br
+            br
+        .col
+    #pie.col(style='text-align:center;')
+      | © 2020 Investigación y Desarrollo
